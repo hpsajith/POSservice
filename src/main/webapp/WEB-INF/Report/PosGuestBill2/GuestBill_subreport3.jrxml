@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="classic"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="311"
+		 pageHeight="612"
+		 columnWidth="311"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kot" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="subtotal" isForPrompting="false" class="java.lang.Double">
+		<defaultValueExpression ><![CDATA[$P{subtotal}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="pospc" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="payType" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="itemPrice" isForPrompting="false" class="java.lang.Double"/>
+	<parameter name="comments" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[$P{comments}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="exchangeRate" isForPrompting="false" class="java.lang.Double">
+		<defaultValueExpression ><![CDATA[$P{exchangeRate}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencyName" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[$P{currencyName}]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT  
+(SELECT TaxName FROM tax WHERE  TaxNo=kbt.TaxNo) AS TName,TaxNo,IFNULL(SUM(TaxAmount),0) AS Tax
+ FROM   front_kot_bot_item AS kbi LEFT   JOIN front_kot_bot_tax AS kbt ON (kbt.KB_ItemNo=kbi.item_no) 
+WHERE kbi.kot_bot_no = $P!{kot} AND isSetMenu='0' GROUP BY  TaxNo]]></queryString>
+
+	<field name="TName" class="java.lang.String"/>
+	<field name="TaxNo" class="java.lang.Integer"/>
+	<field name="Tax" class="java.lang.Double"/>
+
+	<variable name="tot_tax" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{Tax}]]></variableExpression>
+	</variable>
+	<variable name="tot_discount" class="java.lang.Double" resetType="Report" calculation="Nothing">
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="10"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="0"
+						width="302"
+						height="8"
+						key="subreport-2"/>
+					<subreportParameter  name="kotNo">
+						<subreportParameterExpression><![CDATA[$P{kot}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="subtotal">
+						<subreportParameterExpression><![CDATA[$P{subtotal}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="exchangeRate">
+						<subreportParameterExpression><![CDATA[$P{exchangeRate}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<returnValue subreportVariable="discount" toVariable="tot_discount"/>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "GuestBill_subreport3_subreport0.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="11"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" pattern="" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="136"
+						y="0"
+						width="92"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField">
+							<printWhenExpression><![CDATA[new java.lang.Boolean(!$F{TName}.isEmpty())]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{TName}+":"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" pattern="#,##0.00" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="231"
+						y="0"
+						width="59"
+						height="11"
+						forecolor="#000000"
+						backcolor="#FFFFFF"
+						key="textField">
+							<printWhenExpression><![CDATA[new java.lang.Boolean(!$F{TName}.isEmpty())]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right">
+						<font fontName="SansSerif" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[new java.lang.Double(  ($F{Tax}.doubleValue()) /($P{exchangeRate}.doubleValue()) )]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="73"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="16"
+						width="311"
+						height="38"
+						key="subreport-1"/>
+					<subreportParameter  name="kotNo">
+						<subreportParameterExpression><![CDATA[$P{kot}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="itemPrice">
+						<subreportParameterExpression><![CDATA[new java.lang.Double(  ($P{subtotal}.doubleValue()) +($V{tot_tax}.doubleValue()) )]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="payType">
+						<subreportParameterExpression><![CDATA[$P{payType}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="newTotal">
+						<subreportParameterExpression><![CDATA[$P{itemPrice}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="comments">
+						<subreportParameterExpression><![CDATA[$P{comments}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="exchangeRate">
+						<subreportParameterExpression><![CDATA[$P{exchangeRate}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="discount">
+						<subreportParameterExpression><![CDATA[$V{tot_discount}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "GuestBill_subreport0_subreport0.jasper"]]></subreportExpression>
+				</subreport>
+				<textField isStretchWithOverflow="false" pattern="##0.00" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="231"
+						y="0"
+						width="59"
+						height="14"
+						key="textField">
+							<printWhenExpression><![CDATA[new java.lang.Boolean(!$F{TName}.isEmpty())]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Double"><![CDATA[new java.lang.Double(  ($V{tot_tax}.doubleValue()) /($P{exchangeRate}.doubleValue()) )]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="136"
+						y="0"
+						width="92"
+						height="14"
+						key="staticText-1">
+							<printWhenExpression><![CDATA[new java.lang.Boolean(!$F{TName}.isEmpty())]]></printWhenExpression>
+						</reportElement>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Bottom">
+						<font fontName="SansSerif" pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+					</textElement>
+				<text><![CDATA[Total  Tax   :]]></text>
+				</staticText>
+			</band>
+		</summary>
+</jasperReport>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="classic"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="212"
+		 pageHeight="283"
+		 columnWidth="212"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="head1" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="type1" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="head2" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="type2" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="head3" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="type3" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="kotNo" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="printer" isForPrompting="false" class="java.lang.Integer"/>
+	<queryString><![CDATA[select KotNo,ItemCode,Qty,item_name,(SELECT Itemcomment FROM front_kot_bot_item WHERE kot_bot_no=$P{kotNo} AND Item_Code=m_item.item_code) AS remark from front_kot_item_temp,m_item where front_kot_item_temp.ItemCode=m_item.item_code and KotNo=$P{kotNo} and Type=$P{type1} and front_kot_item_temp.printer=$P{printer}]]></queryString>
+
+	<field name="KotNo" class="java.lang.Integer"/>
+	<field name="ItemCode" class="java.lang.Integer"/>
+	<field name="Qty" class="java.lang.Integer"/>
+	<field name="item_name" class="java.lang.String"/>
+	<field name="remark" class="java.lang.String"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="14"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="0"
+						width="211"
+						height="13"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Left" verticalAlignment="Bottom">
+						<font fontName="Arial" pdfFontName="Helvetica-Bold" size="10" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$P{head1}]]></textFieldExpression>
+				</textField>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="20"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="143"
+						y="0"
+						width="24"
+						height="10"
+						key="textField-1"
+						isRemoveLineWhenBlank="true"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{Qty}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="1"
+						y="0"
+						width="16"
+						height="10"
+						key="textField-2"
+						isRemoveLineWhenBlank="true"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{ItemCode}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="17"
+						y="0"
+						width="126"
+						height="10"
+						key="textField-3"
+						isRemoveLineWhenBlank="true"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{item_name}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="true" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="7"
+						y="10"
+						width="160"
+						height="10"
+						key="textField-4"
+						positionType="Float"
+						isRemoveLineWhenBlank="true"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{remark}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="14"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="1"
+						y="1"
+						width="197"
+						height="13"
+						key="subreport-1"/>
+					<subreportParameter  name="head2">
+						<subreportParameterExpression><![CDATA[$P{head2}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="type2">
+						<subreportParameterExpression><![CDATA[$P{type2}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="head3">
+						<subreportParameterExpression><![CDATA[$P{head3}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="type3">
+						<subreportParameterExpression><![CDATA[$P{type3}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="kotNo">
+						<subreportParameterExpression><![CDATA[$P{kotNo}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="printer">
+						<subreportParameterExpression><![CDATA[$P{printer}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "kotItem_subreport0_subreport0.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</summary>
+</jasperReport>
