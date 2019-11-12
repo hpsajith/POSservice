@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <context:component-scan base-package="com.ites.poswebservice" />
+    <mvc:annotation-driven />
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
+<!--//173.243.120.226-->
+    <bean id="dataSourceHotelPos"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <!--itespmsc_hotelwebpos-->
+        <property name="url" value="jdbc:mysql://localhost:3306/hotelwebpos" />
+        <!--itespmsc-->
+        <property name="username" value="itesgfinance" />
+        <!--9D_lLACoeL-->
+        <property name="password" value="itesg@finance" />
+    </bean>
+    <bean id="dataSourceHotelInventory"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <!--itespmsc_hotelinventory-->
+        <property name="url" value="jdbc:mysql://localhost:3306/hotelinventory" />
+        <property name="username" value="itesgfinance" />
+        <property name="password" value="itesg@finance" />
+    </bean>
+    <bean id="dataSourceHotelFinance"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <!--itespmsc_hotelfinance-->
+        <property name="url" value="jdbc:mysql://localhost:3306/hotelfinance" />
+        <property name="username" value="itesgfinance" />
+        <property name="password" value="itesg@finance" />
+    </bean>
+   <bean id="dataSourceReservation"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <!--itespmsc_reservation-->
+        <property name="url" value="jdbc:mysql://localhost:3306/reservation" />
+        <property name="username" value="itesgfinance" />
+        <property name="password" value="itesg@finance" />
+    </bean>
+
+    <bean id="sessionFactoryHotelPos"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceHotelPos" />
+        <property name="packagesToScan">
+            <list>
+                <value>com.ites.poswebservice.model.hotelpos</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <!--itespmsc_hotelwebpos-->
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/hotelwebpos</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="sessionFactoryHotelFinance"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceHotelFinance" />
+        <property name="packagesToScan">
+            <list>
+                <value>com.ites.poswebservice.model.hotelfinance</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <!--itespmsc_hotelfinance-->
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/hotelfinance</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="sessionFactoryHotelInventory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceHotelInventory" />
+        <property name="packagesToScan">
+            <list>
+                <value>com.ites.poswebservice.model.hotelinventory</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <!--itespmsc_hotelinventory-->
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/hotelinventory</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
+    </bean>
+    <bean id="sessionFactoryReservation"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSourceReservation" />
+        <property name="packagesToScan">
+            <list>
+                <value>com.ites.poswebservice.model.reservation</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <!--itespmsc_reservation-->
+                <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/reservation</prop>
+                <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="txManagerHotelPos"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactoryHotelPos" />
+    </bean>
+    <bean id="txManagerFinance"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactoryHotelFinance" />
+    </bean>
+    <bean id="txManagerHotelInventory"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactoryHotelInventory" />
+    </bean>
+    <bean id="txManagerReservation"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactoryReservation" />
+    </bean>
+    
+    <bean id="persistenceExceptionTranslationPostProcessor"
+          class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+    
+    <!--DAO beans-->
+    <bean id="tableDao" class="com.ites.poswebservice.dao.TableDaoImpl"></bean>
+    <bean id="userDao" class="com.ites.poswebservice.dao.UserDaoImpl"></bean>
+    <bean id="guestDao" class="com.ites.poswebservice.dao.GuestDaoImpl"></bean>
+    <bean id="orderDao" class="com.ites.poswebservice.dao.OrderDaoImpl"></bean>
+    <bean id="inventoryDao" class="com.ites.poswebservice.dao.InventoryDaoImpl"></bean>
+    <bean id="financeDao" class="com.ites.poswebservice.dao.FinanceDaoImpl"></bean>
+    <bean id="posDao" class="com.ites.poswebservice.dao.PosDaoImpl"></bean>
+    <bean id="reservationDao" class="com.ites.poswebservice.dao.ReservationDaoImpl"></bean>
+
+    <!--Service beans-->
+    <bean id="tableService" class="com.ites.poswebservice.services.TableServiceImpl"></bean>
+    <bean id="userService" class="com.ites.poswebservice.services.UserServiceImpl"></bean>
+    <bean id="guestService" class="com.ites.poswebservice.services.GuestServiceImpl"></bean>
+    <bean id="orderService" class="com.ites.poswebservice.services.OrderServiceImpl"></bean>
+    <bean id="posService" class="com.ites.poswebservice.services.PosServiceImpl"></bean>
+    <bean id="inventoryService" class="com.ites.poswebservice.services.InventoryServiceImpl"></bean>
+    <bean id="financeService" class="com.ites.poswebservice.services.FinanceServiceImpl"></bean>
+    <bean id="reservationService" class="com.ites.poswebservice.services.ReservationServiceImpl"></bean>
+
+    <!--Other beans-->
+    <!--<bean id="getGuestBill" class="com.ites.poswebservice.controller.GetGuestBill"></bean>-->
+</beans>

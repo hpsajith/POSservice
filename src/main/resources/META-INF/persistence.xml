@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.ites.pos_POSservice_war_1.0-SNAPSHOTPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>com.ites.poswebservice.model.hotelpos.FrontPayment</class>
+    <class>com.ites.poswebservice.model.hotelpos.FrontKotBotItemVoid</class>
+    <class>com.ites.poswebservice.model.hotelpos.MVoidReason</class>
+    <class>com.ites.poswebservice.model.hotelpos.ConfigPosMachine</class>
+    <class>com.ites.poswebservice.model.hotelpos.PaymentType</class>
+    <class>com.ites.poswebservice.model.hotelpos.MAcCreditcard</class>
+    <class>com.ites.poswebservice.model.reservation.Room</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://10.1.1.66:3306/hotelwebpos"/>
+      <property name="javax.persistence.jdbc.user" value="itesgfinance"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="itesg@finance"/>
+    </properties>
+  </persistence-unit>
+</persistence>
