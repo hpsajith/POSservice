@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="classic" pageWidth="212" pageHeight="396" columnWidth="212" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="abdf6ea5-8ab8-4112-9766-c7e0ecd007f6">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String">
+		<defaultValueExpression><![CDATA[".\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="kotNo" class="java.lang.Integer"/>
+	<parameter name="butName" class="java.lang.String"/>
+	<parameter name="parth" class="java.lang.String"/>
+	<parameter name="pos_ID" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[SELECT front_kot_bot_main.tableNo,front_kot_bot_item.unit_prices_withTax,front_kot_bot_main.BillNo,adult,walkingGuest,RoomNo,first_name,front_kot_bot_item.kot_bot_no,m_item.item_code,m_item.item_name,front_kot_bot_item.QTY,front_kot_bot_item.unit_prices,miniBar FROM front_posguest,front_kot_bot_main,front_kot_bot_item,m_item WHERE front_kot_bot_item.kot_bot_no=front_kot_bot_main.kot_no AND front_kot_bot_main.Pos_Guest_no=front_posguest.posGuest_no AND m_item.item_code=front_kot_bot_item.Item_Code and front_kot_bot_item.kot_bot_no=$P{kotNo} and front_kot_bot_item.isSetMenu!=1]]>
+	</queryString>
+	<field name="tableNo" class="java.lang.Integer"/>
+	<field name="unit_prices_withTax" class="java.lang.Double"/>
+	<field name="BillNo" class="java.lang.String"/>
+	<field name="adult" class="java.lang.Integer"/>
+	<field name="walkingGuest" class="java.lang.Integer"/>
+	<field name="RoomNo" class="java.lang.String"/>
+	<field name="first_name" class="java.lang.String"/>
+	<field name="kot_bot_no" class="java.lang.Integer"/>
+	<field name="item_code" class="java.lang.Integer"/>
+	<field name="item_name" class="java.lang.String"/>
+	<field name="QTY" class="java.lang.Double"/>
+	<field name="unit_prices" class="java.lang.Double"/>
+	<field name="miniBar" class="java.lang.Integer"/>
+	<variable name="itemAmount" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[new java.lang.Double(  ($F{QTY}.doubleValue()) *($F{unit_prices}.doubleValue()) )]]></variableExpression>
+	</variable>
+	<variable name="sumUnitPrice" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{unit_prices}]]></variableExpression>
+	</variable>
+	<variable name="sumUnitPriceTax" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{unit_prices_withTax}]]></variableExpression>
+	</variable>
+	<variable name="calRate" class="java.lang.Double">
+		<variableExpression><![CDATA[new java.lang.Double(  ($V{sumUnitPriceTax}.doubleValue()) /($V{sumUnitPrice}.doubleValue()) )]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="253df5aa-cb3c-4bc4-b69c-bacaae7badd9" key="staticText-1" x="20" y="63" width="52" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[BILL NO]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement uuid="bdac40a8-2e7f-42d1-8866-4e15910c2950" key="textField" x="78" y="63" width="55" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BillNo}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement uuid="ab0dc2b5-da0d-4ad6-ada3-ee0b08d90e11" key="line-1" x="0" y="114" width="210" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField pattern="yyyy-MM-dd  HH:mm:ss " isBlankWhenNull="false">
+				<reportElement uuid="c21b30f7-f537-472b-b2c3-877a109e8f72" key="textField-2" x="78" y="76" width="115" height="13" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0d2dc0e6-58c4-4380-89e9-0def66717226" key="staticText-4" x="20" y="88" width="52" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[WAITER]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement uuid="47a1719e-4ab0-4819-982e-1365fd684f8a" key="textField-3" x="78" y="88" width="86" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{butName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="5e2b32c4-f43f-4d41-9a1c-4aec01622820" key="textField-4" x="78" y="100" width="86" height="13" isRemoveLineWhenBlank="true"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RoomNo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="0b8f6745-2e88-443f-a09b-e02217df66f0" key="staticText-8" x="20" y="100" width="52" height="13" isRemoveLineWhenBlank="true"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[ROOM NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="0305f294-f680-4918-8a6b-ccac7f1fafb7" key="staticText-9" x="20" y="76" width="52" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[DATE & TIME]]></text>
+			</staticText>
+			<subreport isUsingCache="true">
+				<reportElement uuid="0f667e9e-a667-41cb-a759-584ce690bcfb" key="subreport-3" x="20" y="42" width="162" height="14"/>
+				<subreportParameter name="pos_id">
+					<subreportParameterExpression><![CDATA[$P{pos_ID}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "GuestBill_subreport1.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement uuid="4532a95f-83f5-4cfe-a49f-97ef335d9fff" key="line-3" x="1" y="61" width="210" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<subreport isUsingCache="true">
+				<reportElement uuid="75beb1df-716b-4a3c-b035-6fef49a44c4f" key="subreport-4" x="20" y="17" width="162" height="13"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "GuestBill_subreport2.jasper"]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement uuid="6c707086-80bd-4cdc-8d30-a705738d2920" key="staticText-12" x="70" y="100" width="8" height="13" isRemoveLineWhenBlank="true"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b779794c-8380-44ba-8415-c0db1589ec5b" key="staticText-13" x="70" y="88" width="8" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f566a9f3-b67f-46a3-85f1-db34aa9d4c5c" key="staticText-14" x="70" y="76" width="8" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d5e9e5ad-d0be-41f6-bce9-9ef8d8f744c7" key="staticText-15" x="70" y="63" width="8" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a7e6753c-6e1f-4a71-9605-aea3c9c4b787" key="staticText-16" x="164" y="63" width="8" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9fcc74e9-b88f-44c3-aecb-6ab8e1616995" key="staticText-17" x="133" y="63" width="31" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None">
+					<font fontName="Arial" size="8"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[TABLE NO]]></text>
+			</staticText>
+			<subreport isUsingCache="true">
+				<reportElement uuid="4a864120-3f1d-42b8-aaf4-6cd8d31ed8d5" key="subreport-5" x="172" y="62" width="20" height="15"/>
+				<subreportParameter name="tableId">
+					<subreportParameterExpression><![CDATA[$F{tableNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "GuestBill_subreport3.jasper"]]></subreportExpression>
+			</subreport>
+			<textField pattern="yyyy-MM-dd  HH:mm:ss " isBlankWhenNull="false">
+				<reportElement uuid="d5b5eca0-229f-4bd9-81e1-5d29eb54ecdd" key="textField-5" x="20" y="0" width="141" height="16" forecolor="#000000" backcolor="#FFFFFF"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="12" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="3f190a3c-4058-4ecf-a667-903b80402ab7" key="textField" x="19" y="0" width="106" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_name}.toUpperCase()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="" isBlankWhenNull="true">
+				<reportElement uuid="8d91de91-80ee-4530-a6f4-9c5adc8d4c44" key="textField" x="127" y="0" width="14" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="7" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{QTY}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="7017f323-8fd5-4442-8ec1-1c21369681fb" key="textField-1" x="142" y="0" width="43" height="12"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.lang.Double(  ($F{QTY}.doubleValue()) *($F{unit_prices_withTax}.doubleValue()) )]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="29" splitType="Stretch">
+			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement uuid="70103bef-de2c-4079-8b2e-6ecf800870a1" key="textField" x="142" y="3" width="43" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{itemAmount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c9ff2415-8575-4c8c-986c-54cdc90a7fc7" key="staticText-3" x="28" y="3" width="113" height="13"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[SUB TOTAL :]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="f1646a5f-f7f9-488d-89c3-1a7d12bf0343" key="line-2" x="0" y="1" width="210" height="1"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<subreport isUsingCache="true">
+				<reportElement uuid="334dc074-cc68-41ee-b67c-82eb103cb4c4" key="subreport-2" x="12" y="14" width="180" height="13"/>
+				<subreportParameter name="kotNo">
+					<subreportParameterExpression><![CDATA[$P{kotNo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="itemPrice">
+					<subreportParameterExpression><![CDATA[$V{itemAmount}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR">
+					<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="subTotal">
+					<subreportParameterExpression><![CDATA[$V{itemAmount}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="calRate">
+					<subreportParameterExpression><![CDATA[$V{calRate}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "GuestBill_subreport0_subreport0.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</summary>
+</jasperReport>

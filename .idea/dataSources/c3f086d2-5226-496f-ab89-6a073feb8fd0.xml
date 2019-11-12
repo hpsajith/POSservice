@@ -1,0 +1,5056 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="dataSourceHotelFinance">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="hotelfinance">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="banquet"/>
+    <schema id="3" name="channel_manager"/>
+    <schema id="4" name="employee_db"/>
+    <schema id="5" name="employee_db2"/>
+    <schema id="6" name="hotelinventory"/>
+    <schema id="7" name="hotelpabx"/>
+    <schema id="8" name="hotelpos"/>
+    <schema id="9" name="hotelposweb"/>
+    <schema id="10" name="hotelspa"/>
+    <schema id="11" name="hotelwebpos"/>
+    <schema id="12" name="hr_system"/>
+    <schema id="13" name="information_schema"/>
+    <schema id="14" name="interfacepms"/>
+    <schema id="15" name="itesredapple"/>
+    <schema id="16" name="ites_bank_finance"/>
+    <schema id="17" name="librarary"/>
+    <schema id="18" name="mysql"/>
+    <schema id="19" name="payroll"/>
+    <schema id="20" name="payroll_ellens"/>
+    <schema id="21" name="payroll_rand"/>
+    <schema id="22" name="performance_schema"/>
+    <schema id="23" name="reservation"/>
+    <schema id="24" name="surgery"/>
+    <schema id="25" name="test"/>
+    <schema id="26" name="test1"/>
+    <schema id="27" name="test2"/>
+    <table id="28" parent="1" name="accountnumbers"/>
+    <table id="29" parent="1" name="accountperiod"/>
+    <table id="30" parent="1" name="accountsubnumbers"/>
+    <table id="31" parent="1" name="accounttype"/>
+    <table id="32" parent="1" name="acperiod"/>
+    <table id="33" parent="1" name="acyear"/>
+    <table id="34" parent="1" name="allocation"/>
+    <table id="35" parent="1" name="allocationremove"/>
+    <table id="36" parent="1" name="bank_config"/>
+    <table id="37" parent="1" name="bank_note_approval"/>
+    <table id="38" parent="1" name="bank_note_cancel"/>
+    <table id="39" parent="1" name="bank_note_d"/>
+    <table id="40" parent="1" name="bank_note_exchange_posting"/>
+    <table id="41" parent="1" name="bank_note_h"/>
+    <table id="42" parent="1" name="bankcharges"/>
+    <table id="43" parent="1" name="bankreconciliation_bank_report"/>
+    <table id="44" parent="1" name="bankreconciliation_d"/>
+    <table id="45" parent="1" name="bankreconciliation_d_nonallocation"/>
+    <table id="46" parent="1" name="bankreconciliation_h"/>
+    <table id="47" parent="1" name="bankreconciliation_temp"/>
+    <table id="48" parent="1" name="basevaluetax"/>
+    <table id="49" parent="1" name="budgetpandl_d"/>
+    <table id="50" parent="1" name="budgetpandl_h"/>
+    <table id="51" parent="1" name="budgetpandl_update"/>
+    <table id="52" parent="1" name="chartofaccount"/>
+    <table id="53" parent="1" name="chartofaccount_currency"/>
+    <table id="54" parent="1" name="chartofaccount_dept"/>
+    <table id="55" parent="1" name="checkdoubleprint"/>
+    <table id="56" parent="1" name="code_configuration"/>
+    <table id="57" parent="1" name="company"/>
+    <table id="58" parent="1" name="costofsaleconfig"/>
+    <table id="59" parent="1" name="costofsaleconfig_new"/>
+    <table id="60" parent="1" name="creditor"/>
+    <table id="61" parent="1" name="creditor_note_approval"/>
+    <table id="62" parent="1" name="creditor_note_cancel"/>
+    <table id="63" parent="1" name="creditor_note_d"/>
+    <table id="64" parent="1" name="creditor_note_h"/>
+    <table id="65" parent="1" name="creditorsubcode"/>
+    <table id="66" parent="1" name="currency_d"/>
+    <table id="67" parent="1" name="currency_h"/>
+    <table id="68" parent="1" name="customjobdefine"/>
+    <table id="69" parent="1" name="customjobdefine_approval"/>
+    <table id="70" parent="1" name="debtor"/>
+    <table id="71" parent="1" name="debtor_credit_note_approval"/>
+    <table id="72" parent="1" name="debtor_credit_note_cancel"/>
+    <table id="73" parent="1" name="debtor_note_approval"/>
+    <table id="74" parent="1" name="debtor_note_cancel"/>
+    <table id="75" parent="1" name="debtor_note_d"/>
+    <table id="76" parent="1" name="debtor_note_h"/>
+    <table id="77" parent="1" name="debtor_temp"/>
+    <table id="78" parent="1" name="debtor_temp_approval"/>
+    <table id="79" parent="1" name="debtor_temp_reject"/>
+    <table id="80" parent="1" name="debtor_temp_ta_commission"/>
+    <table id="81" parent="1" name="debtorcreditnote_detail"/>
+    <table id="82" parent="1" name="debtorcreditnote_h"/>
+    <table id="83" parent="1" name="debtorcreditnotepostingno"/>
+    <table id="84" parent="1" name="debtorentrytransferdetail"/>
+    <table id="85" parent="1" name="debtorsubcode"/>
+    <table id="86" parent="1" name="department"/>
+    <table id="87" parent="1" name="discount_d"/>
+    <table id="88" parent="1" name="empites"/>
+    <table id="89" parent="1" name="exchangegainlosscon_d"/>
+    <table id="90" parent="1" name="fixedasset_item"/>
+    <table id="91" parent="1" name="fixedasset_item_balance_qty"/>
+    <table id="92" parent="1" name="fixedasset_item_depreciation"/>
+    <table id="93" parent="1" name="fixedasset_item_master"/>
+    <table id="94" parent="1" name="fixedasset_item_renew"/>
+    <table id="95" parent="1" name="fixedasset_item_sell"/>
+    <table id="96" parent="1" name="food_beverage_beveragedetails"/>
+    <table id="97" parent="1" name="food_beverage_fooddetails"/>
+    <table id="98" parent="1" name="food_beverage_master"/>
+    <table id="99" parent="1" name="hno"/>
+    <table id="100" parent="1" name="inventory_config"/>
+    <table id="101" parent="1" name="inventoryposting"/>
+    <table id="102" parent="1" name="iou"/>
+    <table id="103" parent="1" name="ioucancel"/>
+    <table id="104" parent="1" name="iousettle"/>
+    <table id="105" parent="1" name="job"/>
+    <table id="106" parent="1" name="job_approval_master"/>
+    <table id="107" parent="1" name="job_main_tab1"/>
+    <table id="108" parent="1" name="job_main_tab2"/>
+    <table id="109" parent="1" name="log_file"/>
+    <table id="110" parent="1" name="log_file_category"/>
+    <table id="111" parent="1" name="log_forms"/>
+    <table id="112" parent="1" name="log_job_type"/>
+    <table id="113" parent="1" name="log_table"/>
+    <table id="114" parent="1" name="logtable"/>
+    <table id="115" parent="1" name="logtableupdate"/>
+    <table id="116" parent="1" name="monthend"/>
+    <table id="117" parent="1" name="monthend_pms_details"/>
+    <table id="118" parent="1" name="monthend_reverse_h"/>
+    <table id="119" parent="1" name="monthend_reverse_period"/>
+    <table id="120" parent="1" name="monthend_reverse_tb"/>
+    <table id="121" parent="1" name="monthendtrialbalance"/>
+    <table id="122" parent="1" name="newpl"/>
+    <table id="123" parent="1" name="newplmaster"/>
+    <table id="124" parent="1" name="nextaccountperiod"/>
+    <table id="125" parent="1" name="other_vat_config"/>
+    <table id="126" parent="1" name="paymentadvice"/>
+    <table id="127" parent="1" name="paymentadvice_cancel"/>
+    <table id="128" parent="1" name="paymentadvice_cheque"/>
+    <table id="129" parent="1" name="paymentadvice_posting"/>
+    <table id="130" parent="1" name="paymentadvice_taxpercentage"/>
+    <table id="131" parent="1" name="paymentcheque"/>
+    <table id="132" parent="1" name="paymentchequereverse"/>
+    <table id="133" parent="1" name="paymentvoucher"/>
+    <table id="134" parent="1" name="paymentvoucher_advance_payment"/>
+    <table id="135" parent="1" name="paymentvoucher_approval"/>
+    <table id="136" parent="1" name="paymentvoucher_cancel"/>
+    <table id="137" parent="1" name="paymentvoucher_cheque_printing"/>
+    <table id="138" parent="1" name="paymentvoucher_h"/>
+    <table id="139" parent="1" name="paymentvoucher_posting"/>
+    <table id="140" parent="1" name="pettycash_config"/>
+    <table id="141" parent="1" name="pettycash_posting_cancel"/>
+    <table id="142" parent="1" name="pettycash_posting_ref"/>
+    <table id="143" parent="1" name="pettycash_transaction"/>
+    <table id="144" parent="1" name="pettycash_transaction_cancel"/>
+    <table id="145" parent="1" name="pettycash_transaction_h"/>
+    <table id="146" parent="1" name="pettycash_transaction_sup_post"/>
+    <table id="147" parent="1" name="pettycash_transaction_update"/>
+    <table id="148" parent="1" name="pms_config"/>
+    <table id="149" parent="1" name="pms_daily_details"/>
+    <table id="150" parent="1" name="pmsposting"/>
+    <table id="151" parent="1" name="posting"/>
+    <table id="152" parent="1" name="printoptiondefault"/>
+    <table id="153" parent="1" name="report_cashflow"/>
+    <table id="154" parent="1" name="report_cashflow_master"/>
+    <table id="155" parent="1" name="reportbalancesheet"/>
+    <table id="156" parent="1" name="reportbalancesheetmaster"/>
+    <table id="157" parent="1" name="reportcosting"/>
+    <table id="158" parent="1" name="reportcostingmaster"/>
+    <table id="159" parent="1" name="reportcreditor"/>
+    <table id="160" parent="1" name="reportcreditormaster"/>
+    <table id="161" parent="1" name="reportdebtor"/>
+    <table id="162" parent="1" name="reportdebtormaster"/>
+    <table id="163" parent="1" name="reportpandl"/>
+    <table id="164" parent="1" name="reportpandlbudget"/>
+    <table id="165" parent="1" name="reportpandldept"/>
+    <table id="166" parent="1" name="reportpandldeptmaster"/>
+    <table id="167" parent="1" name="reportpandlmaster"/>
+    <table id="168" parent="1" name="reporttrialbalance"/>
+    <table id="169" parent="1" name="reporttrialbalancemaster"/>
+    <table id="170" parent="1" name="sof_advance_d"/>
+    <table id="171" parent="1" name="sof_advance_h"/>
+    <table id="172" parent="1" name="sof_advance_using_cancel"/>
+    <table id="173" parent="1" name="sof_cancel_advance"/>
+    <table id="174" parent="1" name="sof_cancel_payments"/>
+    <table id="175" parent="1" name="sof_invoice_payments_d"/>
+    <table id="176" parent="1" name="sof_invoice_payments_h"/>
+    <table id="177" parent="1" name="split"/>
+    <table id="178" parent="1" name="splitremovevalidation"/>
+    <table id="179" parent="1" name="srn_budget_config_coa"/>
+    <table id="180" parent="1" name="srn_budget_config_dept"/>
+    <table id="181" parent="1" name="srn_budget_d"/>
+    <table id="182" parent="1" name="srn_budget_h"/>
+    <table id="183" parent="1" name="srn_budget_update"/>
+    <table id="184" parent="1" name="srn_directcost_config_dept"/>
+    <table id="185" parent="1" name="srn_pl_d"/>
+    <table id="186" parent="1" name="srn_pl_h"/>
+    <table id="187" parent="1" name="srn_tax_configuration"/>
+    <table id="188" parent="1" name="subdepartment"/>
+    <table id="189" parent="1" name="subtype"/>
+    <table id="190" parent="1" name="system_user"/>
+    <table id="191" parent="1" name="taxconfig"/>
+    <table id="192" parent="1" name="temp_posting"/>
+    <table id="193" parent="1" name="temp_posting_unlock"/>
+    <table id="194" parent="1" name="userlogin"/>
+    <table id="195" parent="1" name="usertype"/>
+    <table id="196" parent="1" name="usertypedefine"/>
+    <table id="197" parent="1" name="usertypedefine_approval"/>
+    <table id="198" parent="1" name="vatregistrationno"/>
+    <table id="199" parent="1" name="year_end"/>
+    <view id="200" parent="1" name="bankreconciliation_d_v">
+      <comment>VIEW</comment>
+    </view>
+    <view id="201" parent="1" name="bankreconciliation_temp_v">
+      <comment>VIEW</comment>
+    </view>
+    <column id="202" parent="28" name="No_">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="203" parent="28" name="Range_Starts">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="204" parent="28" name="Range_End">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="205" parent="28" name="Ac_Name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="206" parent="28" name="PRIMARY">
+      <columns>No_</columns>
+      <primary>1</primary>
+    </key>
+    <column id="207" parent="29" name="PeriodNo">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="208" parent="29" name="Ac_Year_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="209" parent="29" name="Period_Start_date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="210" parent="29" name="Period_End_date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="211" parent="29" name="user_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="212" parent="29" name="Curr_date_time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="213" parent="29" name="Active">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="214" parent="29" name="PRIMARY">
+      <columns>PeriodNo
+Active</columns>
+      <primary>1</primary>
+    </key>
+    <column id="215" parent="30" name="pk_No">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="216" parent="30" name="Type_No">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="217" parent="30" name="Sub_Type_No">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="218" parent="30" name="Sub_Ac_Name">
+      <data-type>varchar(600)|0</data-type>
+    </column>
+    <column id="219" parent="30" name="Sub_Range_Starts">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="220" parent="30" name="Sub_Range_Ends">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="221" parent="30" name="main_sub_no">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="222" parent="31" name="Id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="223" parent="31" name="Ac_Type">
+      <data-type>varchar(25)|0</data-type>
+    </column>
+    <key id="224" parent="31" name="PRIMARY">
+      <columns>Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="225" parent="32" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="226" parent="32" name="Start_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="227" parent="32" name="End_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <key id="228" parent="32" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="229" parent="33" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="230" parent="33" name="Start_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="231" parent="33" name="End_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="232" parent="33" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="233" parent="33" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="234" parent="33" name="Active">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <key id="235" parent="33" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="236" parent="34" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="237" parent="34" name="Allocation_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="238" parent="34" name="Posting_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="239" parent="34" name="Allocation_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="240" parent="34" name="User_Id">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="241" parent="34" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="242" parent="34" name="Allocation_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <index id="243" parent="34" name="NewIndex1">
+      <columns>Posting_No</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <index id="244" parent="34" name="NewIndex2">
+      <columns>Allocation_Date</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="245" parent="34" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="246" parent="35" name="Pk_no">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="247" parent="35" name="Alloc_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="248" parent="35" name="Cur_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="249" parent="35" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="250" parent="35" name="remove_Cheque_State">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="251" parent="35" name="PRIMARY">
+      <columns>Pk_no</columns>
+      <primary>1</primary>
+    </key>
+    <column id="252" parent="36" name="bank_sub_no">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="253" parent="37" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="254" parent="37" name="Master_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="255" parent="37" name="Approval_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="256" parent="37" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="257" parent="37" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="258" parent="37" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="259" parent="38" name="Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="260" parent="38" name="Master_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="261" parent="38" name="Cancel_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="262" parent="38" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="263" parent="38" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="264" parent="38" name="PRIMARY">
+      <columns>Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="265" parent="39" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(255)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="266" parent="39" name="Master_Pk">
+      <data-type>int(255)|0</data-type>
+    </column>
+    <column id="267" parent="39" name="Account_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="268" parent="39" name="Exchange_Rate">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="269" parent="39" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="270" parent="39" name="Credit_Debit">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="271" parent="39" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="272" parent="39" name="C_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="273" parent="39" name="D_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="274" parent="39" name="Original_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="275" parent="39" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="276" parent="40" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(50)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="277" parent="40" name="Jounel_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="278" parent="40" name="ac_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="279" parent="40" name="Posting_No">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="280" parent="40" name="Exchange_Rate">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="281" parent="40" name="Original_Value">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="282" parent="40" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="283" parent="41" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(255)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="284" parent="41" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="285" parent="41" name="Reference_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="286" parent="41" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="287" parent="41" name="Approve_Level">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="288" parent="41" name="Approve_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="289" parent="41" name="Is_Foreign_Transfer">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="290" parent="41" name="Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="291" parent="41" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="292" parent="41" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="293" parent="41" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="294" parent="42" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="295" parent="42" name="PANo">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="296" parent="42" name="Accno">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="297" parent="42" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="298" parent="42" name="State">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="299" parent="42" name="CancelState">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="300" parent="42" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="301" parent="42" name="CurrentDateTime">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="302" parent="42" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="303" parent="43" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(15)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="304" parent="43" name="Account_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="305" parent="43" name="Account_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="306" parent="43" name="Rec_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="307" parent="43" name="Bank_Balance">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="308" parent="43" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="309" parent="44" name="Pk_no">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="310" parent="44" name="R_no">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="311" parent="44" name="Posting_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="312" parent="44" name="AccountNo">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <key id="313" parent="44" name="PRIMARY">
+      <columns>Pk_no</columns>
+      <primary>1</primary>
+    </key>
+    <column id="314" parent="45" name="Pk_no">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="315" parent="45" name="R_no">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="316" parent="45" name="Posting_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="317" parent="45" name="AccountNo">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <key id="318" parent="45" name="PRIMARY">
+      <columns>Pk_no</columns>
+      <primary>1</primary>
+    </key>
+    <column id="319" parent="46" name="Re_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="320" parent="46" name="Rdate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="321" parent="46" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="322" parent="46" name="Date_Time">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="323" parent="46" name="LedgerBalance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="324" parent="46" name="Account_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="325" parent="46" name="BankBalance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="326" parent="46" name="F_LedgerBalance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="327" parent="46" name="F_BankBalance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="328" parent="46" name="Bank_Category">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="329" parent="46" name="PRIMARY">
+      <columns>Re_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="330" parent="47" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="331" parent="47" name="Posting_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="332" parent="47" name="bank">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="333" parent="47" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="334" parent="47" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="335" parent="47" name="rec_no">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="336" parent="47" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="337" parent="48" name="TaxNo">
+      <mandatory>1</mandatory>
+      <data-type>int(100)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="338" parent="48" name="AccuntNo">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="339" parent="48" name="TaxName">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="340" parent="48" name="discription">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="341" parent="48" name="Rate">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="342" parent="48" name="taxCalculateValue">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="343" parent="48" name="Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="344" parent="48" name="Net">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="345" parent="48" name="GroopNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="346" parent="48" name="active">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="347" parent="48" name="taxBasevalue">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="348" parent="48" name="PRIMARY">
+      <columns>TaxNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="349" parent="49" name="D_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="350" parent="49" name="Sub_no">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="351" parent="49" name="H_Pk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="352" parent="49" name="Group_1">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="353" parent="49" name="Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="354" parent="49" name="COA_No">
+      <data-type>varchar(125)|0</data-type>
+      <default-expression>&apos; &apos;</default-expression>
+    </column>
+    <column id="355" parent="49" name="COA_Name">
+      <data-type>varbinary(255)|0</data-type>
+      <default-expression>&apos; &apos;</default-expression>
+    </column>
+    <column id="356" parent="49" name="Month1">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="357" parent="49" name="Month2">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="358" parent="49" name="Month3">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="359" parent="49" name="Month4">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="360" parent="49" name="Month5">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="361" parent="49" name="Month6">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="362" parent="49" name="Month7">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="363" parent="49" name="Month8">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="364" parent="49" name="Month9">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="365" parent="49" name="Month10">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="366" parent="49" name="Month11">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="367" parent="49" name="Month12">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="368" parent="49" name="PRIMARY">
+      <columns>D_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="369" parent="50" name="H_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="370" parent="50" name="Ac_Year">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="371" parent="50" name="Period_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="372" parent="50" name="UserId">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="373" parent="50" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="374" parent="50" name="PRIMARY">
+      <columns>H_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="375" parent="51" name="Update_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="376" parent="51" name="Ac_Year">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="377" parent="51" name="Updated_User">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="378" parent="51" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="379" parent="51" name="PRIMARY">
+      <columns>Update_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="380" parent="52" name="Ac_pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="381" parent="52" name="Ac_Sub_Code">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="382" parent="52" name="Account_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="383" parent="52" name="Account_Type">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="384" parent="52" name="Account_Name">
+      <data-type>varchar(150)|0</data-type>
+    </column>
+    <column id="385" parent="52" name="represent_dept">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="386" parent="52" name="Description">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="387" parent="52" name="Created_User_ID">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="388" parent="52" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <index id="389" parent="52" name="NewIndex1">
+      <columns>Account_No</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="390" parent="52" name="PRIMARY">
+      <columns>Ac_pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="391" parent="53" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(50)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="392" parent="53" name="Bank_Account_No">
+      <data-type>varchar(11)|0</data-type>
+    </column>
+    <column id="393" parent="53" name="Currency_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="394" parent="53" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="395" parent="54" name="Account_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="396" parent="54" name="Sub_Dept_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="397" parent="54" name="PRIMARY">
+      <columns>Account_No
+Sub_Dept_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="398" parent="55" name="pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="399" parent="55" name="posting_No">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="400" parent="55" name="checkNo">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <column id="401" parent="55" name="userId">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <key id="402" parent="55" name="PRIMARY">
+      <columns>pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="403" parent="56" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="404" parent="56" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="405" parent="56" name="Start_Code">
+      <data-type>varchar(11)|0</data-type>
+    </column>
+    <key id="406" parent="56" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="407" parent="57" name="PkNo">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="408" parent="57" name="CompanyName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="409" parent="57" name="Address">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="410" parent="57" name="Telephone">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="411" parent="57" name="email">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="412" parent="57" name="Logo">
+      <data-type>blob|0</data-type>
+    </column>
+    <key id="413" parent="57" name="PRIMARY">
+      <columns>PkNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="414" parent="58" name="sub_no">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="415" parent="59" name="sub_no">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="416" parent="59" name="PRIMARY">
+      <columns>sub_no</columns>
+      <primary>1</primary>
+    </key>
+    <column id="417" parent="60" name="Cre_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="418" parent="60" name="Cre_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="419" parent="60" name="Cre_Add1">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="420" parent="60" name="Cre_Add2">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="421" parent="60" name="Cre_Tel1">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="422" parent="60" name="Cre_Tel2">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="423" parent="60" name="Cre_Mob1">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="424" parent="60" name="Cre_Fax">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="425" parent="60" name="Cre_email1">
+      <data-type>varchar(60)|0</data-type>
+    </column>
+    <column id="426" parent="60" name="Cre_email2">
+      <data-type>varchar(60)|0</data-type>
+    </column>
+    <column id="427" parent="60" name="Cre_Cont_Personal">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="428" parent="60" name="Cre_Outbal">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="429" parent="60" name="Cre_Cr_limit">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="430" parent="60" name="Cre_Cr_period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="431" parent="60" name="Cre_Term">
+      <data-type>varchar(8)|0</data-type>
+    </column>
+    <column id="432" parent="60" name="Cre_Vat_RegNo">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="433" parent="60" name="Cre_Vat_Stat">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="434" parent="60" name="Cre_active">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="435" parent="60" name="Creditor_Type">
+      <data-type>varchar(50)|0</data-type>
+      <default-expression>&apos;C&apos;</default-expression>
+    </column>
+    <column id="436" parent="60" name="Cre_Category">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="437" parent="60" name="Has_Advance">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="438" parent="60" name="Advance_Percentage">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="439" parent="60" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="440" parent="60" name="PRIMARY">
+      <columns>Cre_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="441" parent="61" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="442" parent="61" name="Master_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="443" parent="61" name="Approval_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="444" parent="61" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="445" parent="61" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="446" parent="61" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="447" parent="62" name="Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="448" parent="62" name="Master_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="449" parent="62" name="Cancel_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="450" parent="62" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="451" parent="62" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="452" parent="62" name="PRIMARY">
+      <columns>Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="453" parent="63" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(255)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="454" parent="63" name="Master_Pk">
+      <data-type>int(255)|0</data-type>
+    </column>
+    <column id="455" parent="63" name="Account_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="456" parent="63" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="457" parent="63" name="Credit_Debit">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="458" parent="63" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="459" parent="63" name="C_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="460" parent="63" name="D_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="461" parent="63" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="462" parent="64" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(255)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="463" parent="64" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="464" parent="64" name="Reference_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="465" parent="64" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="466" parent="64" name="Approve_Level">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="467" parent="64" name="Approve_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="468" parent="64" name="Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="469" parent="64" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="470" parent="64" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="471" parent="64" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="472" parent="65" name="subcode">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="473" parent="66" name="Currency_d_Id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="474" parent="66" name="CurrencyId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="475" parent="66" name="Price">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="476" parent="66" name="Add_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="477" parent="66" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="478" parent="66" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="479" parent="66" name="PRIMARY">
+      <columns>Currency_d_Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="480" parent="67" name="CurrencyId">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="481" parent="67" name="CurrencySign">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="482" parent="67" name="CurrencyName">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="483" parent="67" name="PRIMARY">
+      <columns>CurrencyId</columns>
+      <primary>1</primary>
+    </key>
+    <column id="484" parent="68" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="485" parent="68" name="Type_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="486" parent="68" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="487" parent="68" name="Job_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="488" parent="68" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="489" parent="69" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="490" parent="69" name="UserType_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="491" parent="69" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="492" parent="69" name="Approval_Person_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="493" parent="69" name="PaymentVoucher_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="494" parent="69" name="CreditNote_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="495" parent="69" name="DebitNote_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="496" parent="69" name="BankNote_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="497" parent="69" name="Debtor_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="498" parent="69" name="Approve_Debetor_Credit">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="499" parent="69" name="Approve_Debetor_Debit">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="500" parent="69" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="501" parent="70" name="DebtorNo">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="502" parent="70" name="Debtor_Id">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="503" parent="70" name="Deb_Type">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="504" parent="70" name="Deb_Name">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="505" parent="70" name="Address1">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="506" parent="70" name="Address2">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="507" parent="70" name="Cont_Person">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="508" parent="70" name="Tel1">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="509" parent="70" name="Tel2">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="510" parent="70" name="email1">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="511" parent="70" name="email2">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="512" parent="70" name="fax1">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="513" parent="70" name="fax2">
+      <data-type>varchar(50)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="514" parent="70" name="mob1">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="515" parent="70" name="mob2">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="516" parent="70" name="Vat_Reg_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="517" parent="70" name="Vat_state">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="518" parent="70" name="Pay_terms">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="519" parent="70" name="Out_Balnce">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="520" parent="70" name="Cr_limit">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="521" parent="70" name="Cr_period">
+      <data-type>varchar(225)|0</data-type>
+    </column>
+    <column id="522" parent="70" name="Active">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="523" parent="70" name="PRIMARY">
+      <columns>DebtorNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="524" parent="71" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="525" parent="71" name="Master_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="526" parent="71" name="Approval_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="527" parent="71" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="528" parent="71" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="529" parent="71" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="530" parent="72" name="Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="531" parent="72" name="Master_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="532" parent="72" name="Cancel_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="533" parent="72" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="534" parent="72" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="535" parent="72" name="PRIMARY">
+      <columns>Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="536" parent="73" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="537" parent="73" name="Master_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="538" parent="73" name="Approval_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="539" parent="73" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="540" parent="73" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="541" parent="73" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="542" parent="74" name="Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="543" parent="74" name="Master_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="544" parent="74" name="Cancel_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="545" parent="74" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="546" parent="74" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="547" parent="74" name="PRIMARY">
+      <columns>Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="548" parent="75" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(255)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="549" parent="75" name="Master_Pk">
+      <data-type>int(255)|0</data-type>
+    </column>
+    <column id="550" parent="75" name="Account_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="551" parent="75" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="552" parent="75" name="Credit_Debit">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="553" parent="75" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="554" parent="75" name="C_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="555" parent="75" name="D_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="556" parent="75" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="557" parent="76" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(255)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="558" parent="76" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="559" parent="76" name="Reference_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="560" parent="76" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="561" parent="76" name="Approve_Level">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="562" parent="76" name="Approve_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="563" parent="76" name="Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="564" parent="76" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="565" parent="76" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="566" parent="76" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="567" parent="77" name="DebtorNo">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="568" parent="77" name="Debtor_Id">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="569" parent="77" name="Deb_Type">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="570" parent="77" name="Deb_Name">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="571" parent="77" name="Address1">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="572" parent="77" name="Address2">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="573" parent="77" name="Cont_Person">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="574" parent="77" name="Tel1">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="575" parent="77" name="Tel2">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="576" parent="77" name="email1">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="577" parent="77" name="email2">
+      <data-type>varchar(500)|0</data-type>
+    </column>
+    <column id="578" parent="77" name="fax1">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="579" parent="77" name="fax2">
+      <data-type>varchar(50)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="580" parent="77" name="mob1">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="581" parent="77" name="mob2">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="582" parent="77" name="Vat_Reg_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="583" parent="77" name="Vat_state">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="584" parent="77" name="Pay_terms">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="585" parent="77" name="Out_Balnce">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="586" parent="77" name="Cr_limit">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="587" parent="77" name="Cr_period">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="588" parent="77" name="Approved">
+      <comment>0-no, 1-yes, 2-reject</comment>
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="589" parent="77" name="Approval_No">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="590" parent="77" name="STATUS">
+      <comment>house account</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="591" parent="77" name="Company">
+      <comment>house account</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="592" parent="77" name="EmployeeNo">
+      <comment>house account</comment>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="593" parent="77" name="state">
+      <comment>travel agent, corporate</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="594" parent="77" name="zip">
+      <comment>travel agent, corporate</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="595" parent="77" name="city">
+      <comment>travel, corporate</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="596" parent="77" name="PRIMARY">
+      <columns>DebtorNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="597" parent="78" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="598" parent="78" name="Debtor_Pk">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="599" parent="78" name="Approval_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="600" parent="78" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="601" parent="78" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="602" parent="78" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="603" parent="79" name="Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="604" parent="79" name="Debtor_Pk">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="605" parent="79" name="Cancel_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="606" parent="79" name="Reason">
+      <data-type>varchar(511)|0</data-type>
+    </column>
+    <column id="607" parent="79" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="608" parent="79" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="609" parent="79" name="PRIMARY">
+      <columns>Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="610" parent="80" name="pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="611" parent="80" name="Tra_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="612" parent="80" name="from_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="613" parent="80" name="to_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="614" parent="80" name="Room_Commission">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="615" parent="80" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="616" parent="80" name="active">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="617" parent="80" name="PRIMARY">
+      <columns>pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="618" parent="81" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="619" parent="81" name="Master_pk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="620" parent="81" name="Value_of_supply">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="621" parent="81" name="Value_of_vat">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="622" parent="81" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="623" parent="82" name="pk_no">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="624" parent="82" name="DN_no">
+      <mandatory>1</mandatory>
+      <data-type>varchar(60)|0</data-type>
+    </column>
+    <column id="625" parent="82" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="626" parent="82" name="Reference_No">
+      <data-type>varchar(60)|0</data-type>
+    </column>
+    <column id="627" parent="82" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="628" parent="82" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="629" parent="82" name="Debtor_Acc">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <column id="630" parent="82" name="Sub_dep">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="631" parent="82" name="Revenue_Acc">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <column id="632" parent="82" name="Amount_In_Words">
+      <data-type>varchar(1024)|0</data-type>
+    </column>
+    <column id="633" parent="82" name="Approve_Level">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="634" parent="82" name="Approve_State">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="635" parent="82" name="Cancel_State">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="636" parent="82" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="637" parent="82" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="638" parent="82" name="PRIMARY">
+      <columns>pk_no
+DN_no</columns>
+      <primary>1</primary>
+    </key>
+    <column id="639" parent="83" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="640" parent="83" name="dcnno">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="641" parent="83" name="postingno">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <key id="642" parent="83" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="643" parent="84" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(100)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="644" parent="84" name="postingNo">
+      <data-type>int(100)|0</data-type>
+    </column>
+    <column id="645" parent="84" name="FromDid">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="646" parent="84" name="ToDid">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="647" parent="84" name="Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="648" parent="84" name="Uid">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="649" parent="84" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="650" parent="85" name="subcode">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="651" parent="86" name="Dept_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="652" parent="86" name="Dept_Name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="653" parent="86" name="Description">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <key id="654" parent="86" name="PRIMARY">
+      <columns>Dept_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="655" parent="87" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="656" parent="87" name="PANo">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="657" parent="87" name="Accno">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="658" parent="87" name="Amount">
+      <data-type>double(20,2)|0</data-type>
+    </column>
+    <column id="659" parent="87" name="Sate">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="660" parent="87" name="CancelState">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="661" parent="87" name="userId">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="662" parent="87" name="CurrentDateTime">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="663" parent="87" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="664" parent="88" name="PkNo">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="665" parent="88" name="empNo">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <key id="666" parent="88" name="PRIMARY">
+      <columns>PkNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="667" parent="89" name="pk">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="668" parent="89" name="PANo">
+      <data-type>varchar(765)|0</data-type>
+    </column>
+    <column id="669" parent="89" name="Accno">
+      <data-type>varchar(765)|0</data-type>
+    </column>
+    <column id="670" parent="89" name="Bank">
+      <data-type>varchar(765)|0</data-type>
+    </column>
+    <column id="671" parent="89" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="672" parent="89" name="State">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="673" parent="89" name="cancelState">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="674" parent="89" name="userId">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="675" parent="89" name="CurrentDataTime">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="676" parent="90" name="Ite_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="677" parent="90" name="Ite_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="678" parent="90" name="Ite_Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="679" parent="90" name="ChartOfAcc">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <key id="680" parent="90" name="PRIMARY">
+      <columns>Ite_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="681" parent="91" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="682" parent="91" name="FA_In_Pk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="683" parent="91" name="Initial_Qty">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="684" parent="91" name="Iss_Qty">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="685" parent="91" name="Bal_Qty">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="686" parent="91" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="687" parent="92" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="688" parent="92" name="FA_pk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="689" parent="92" name="Yr">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="690" parent="92" name="Mon">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="691" parent="92" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="692" parent="92" name="Date_First">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="693" parent="92" name="Dep_State">
+      <data-type>varchar(1)|0</data-type>
+      <default-expression>&apos;N&apos;</default-expression>
+    </column>
+    <column id="694" parent="92" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="695" parent="92" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="696" parent="92" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="697" parent="93" name="FA_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="698" parent="93" name="FA_Ref_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="699" parent="93" name="GRN_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="700" parent="93" name="Bal_Qty_tbl_pk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="701" parent="93" name="Sub_Department">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="702" parent="93" name="FA_Account_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="703" parent="93" name="Item_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="704" parent="93" name="Qty">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="705" parent="93" name="Unit_Price">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="706" parent="93" name="Description">
+      <data-type>varchar(512)|0</data-type>
+    </column>
+    <column id="707" parent="93" name="Total_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="708" parent="93" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="709" parent="93" name="Is_Dep">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="710" parent="93" name="Dep_Account_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="711" parent="93" name="Dep_Percentage_per_yr">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="712" parent="93" name="No_Yrs">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="713" parent="93" name="No_Months">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="714" parent="93" name="AcYear">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="715" parent="93" name="AcPeriod">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="716" parent="93" name="Is_Stopped">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="717" parent="93" name="Is_Finished">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="718" parent="93" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="719" parent="93" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="720" parent="93" name="PRIMARY">
+      <columns>FA_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="721" parent="94" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="722" parent="94" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="723" parent="94" name="FA_Master_Pk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="724" parent="94" name="Prevous_Total">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="725" parent="94" name="Remaining_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="726" parent="94" name="Renewal_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="727" parent="94" name="Effected_Account_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="728" parent="94" name="AcYear">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="729" parent="94" name="AcPeriod">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="730" parent="94" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="731" parent="94" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="732" parent="94" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="733" parent="95" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="734" parent="95" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="735" parent="95" name="FA_Master_PK">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="736" parent="95" name="Total_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="737" parent="95" name="Depre_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="738" parent="95" name="ToBeDep_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="739" parent="95" name="Remain_Months">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="740" parent="95" name="AcYr">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="741" parent="95" name="AcPeriod">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="742" parent="95" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="743" parent="95" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="744" parent="95" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="745" parent="96" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="746" parent="96" name="Type_F_B">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="747" parent="96" name="COA">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <key id="748" parent="96" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="749" parent="97" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="750" parent="97" name="Type_F_B">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="751" parent="97" name="COA">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <key id="752" parent="97" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="753" parent="98" name="PK_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="754" parent="98" name="Restaurant_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="755" parent="98" name="Kitchen_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="756" parent="98" name="Bar_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="757" parent="98" name="PRIMARY">
+      <columns>PK_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="758" parent="99" name="no">
+      <data-type>int(100)|0</data-type>
+    </column>
+    <column id="759" parent="100" name="Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="760" parent="100" name="Value_">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="761" parent="100" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="762" parent="100" name="PRIMARY">
+      <columns>Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="763" parent="101" name="Posting_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="764" parent="101" name="Reference_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="765" parent="101" name="Account_No">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="766" parent="101" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="767" parent="101" name="Description">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="768" parent="101" name="Credit_Debit">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="769" parent="101" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="770" parent="101" name="C_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="771" parent="101" name="D_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="772" parent="101" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="773" parent="101" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="774" parent="101" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="775" parent="101" name="Posting_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="776" parent="101" name="Posting_Type">
+      <data-type>varchar(10)|0</data-type>
+    </column>
+    <column id="777" parent="101" name="Item_No">
+      <data-type>varchar(125)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="778" parent="101" name="CostFor">
+      <comment>1-Guest 2-Staff</comment>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="779" parent="101" name="inv_no">
+      <data-type>varchar(100)|0</data-type>
+      <default-expression>&apos;-&apos;</default-expression>
+    </column>
+    <key id="780" parent="101" name="PRIMARY">
+      <columns>Posting_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="781" parent="102" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="782" parent="102" name="iounum">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="783" parent="102" name="Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="784" parent="102" name="ReceiverName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="785" parent="102" name="ReceivedAmount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="786" parent="102" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="787" parent="102" name="state">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="788" parent="102" name="cancelState">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="789" parent="102" name="userId">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="790" parent="102" name="Current_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="791" parent="102" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="792" parent="103" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10) unsigned|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="793" parent="103" name="ioupk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="794" parent="103" name="uid">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="795" parent="103" name="current_date_time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="796" parent="103" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="797" parent="104" name="iouno">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="798" parent="104" name="settleDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="799" parent="104" name="balance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="800" parent="104" name="expenditure">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="801" parent="104" name="uid">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="802" parent="104" name="current_data_time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="803" parent="104" name="PRIMARY">
+      <columns>iouno</columns>
+      <primary>1</primary>
+    </key>
+    <column id="804" parent="105" name="Job_Id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="805" parent="105" name="Job_Name">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <key id="806" parent="105" name="PRIMARY">
+      <columns>Job_Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="807" parent="106" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="808" parent="106" name="Approval_Name">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="809" parent="106" name="PaymentVoucher_Approval">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="810" parent="106" name="CreditNote_Approval">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="811" parent="106" name="DebitNote_Approval">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="812" parent="106" name="BankNote_Approval">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="813" parent="106" name="Debtor_Approval">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="814" parent="106" name="Approve_Debetor_Credit">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="815" parent="106" name="Approve_Debetor_Debit">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="816" parent="106" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="817" parent="107" name="Main_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="818" parent="107" name="Main_Name">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="819" parent="107" name="Active">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="820" parent="107" name="PRIMARY">
+      <columns>Main_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="821" parent="108" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="822" parent="108" name="Main_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="823" parent="108" name="Sub_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="824" parent="108" name="Sub_Name">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="825" parent="108" name="Active">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="826" parent="108" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="827" parent="109" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="828" parent="109" name="Form_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="829" parent="109" name="Job_Type_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="830" parent="109" name="Record_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="831" parent="109" name="Record_No_Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="832" parent="109" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="833" parent="109" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="834" parent="109" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="835" parent="110" name="Category_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="836" parent="110" name="Category_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="837" parent="110" name="PRIMARY">
+      <columns>Category_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="838" parent="111" name="Form_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="839" parent="111" name="Form_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="840" parent="111" name="Category_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="841" parent="111" name="PRIMARY">
+      <columns>Form_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="842" parent="112" name="Job_Type_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="843" parent="112" name="Job_Type_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="844" parent="112" name="PRIMARY">
+      <columns>Job_Type_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="845" parent="113" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="846" parent="113" name="Form_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="847" parent="113" name="Record_No">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="848" parent="113" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="849" parent="113" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="850" parent="113" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="851" parent="114" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="852" parent="114" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="853" parent="114" name="Login_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="854" parent="114" name="Logout_Date_Time">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="855" parent="114" name="Logged_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="856" parent="114" name="Machine_Name">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <key id="857" parent="114" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="858" parent="115" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="859" parent="115" name="Locked_User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="860" parent="115" name="Locked_Date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="861" parent="115" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="862" parent="115" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="863" parent="115" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="864" parent="116" name="Month_End_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(255)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="865" parent="116" name="AcYear">
+      <data-type>int(15)|0</data-type>
+    </column>
+    <column id="866" parent="116" name="AcPeriod">
+      <data-type>int(15)|0</data-type>
+    </column>
+    <column id="867" parent="116" name="Depreciation">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="868" parent="116" name="TB_BS">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="869" parent="116" name="Final_Run">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="870" parent="116" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="871" parent="116" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="872" parent="116" name="UserIP">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="873" parent="116" name="PRIMARY">
+      <columns>Month_End_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="874" parent="117" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="875" parent="117" name="AcYear">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="876" parent="117" name="AcPeriod">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="877" parent="117" name="Total_Room_Nights">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="878" parent="117" name="Total_Guest_Nights">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="879" parent="117" name="Average_Room_Rate">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="880" parent="117" name="Average_Occupancy">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="881" parent="117" name="UserID">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="882" parent="117" name="Curr_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="883" parent="117" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="884" parent="118" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="885" parent="118" name="Reversing_Period">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="886" parent="118" name="Reversing_done_by">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="887" parent="118" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="888" parent="118" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="889" parent="119" name="Cur_Period_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="890" parent="120" name="PK_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="891" parent="120" name="Reverse_h_pk">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="892" parent="120" name="Ac_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="893" parent="120" name="Ac_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="894" parent="120" name="Ac_Sub_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="895" parent="120" name="Ac_Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="896" parent="120" name="COF_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="897" parent="120" name="COF_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="898" parent="120" name="Total_C_Bf_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="899" parent="120" name="Total_D_Bf_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="900" parent="120" name="Total_C_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="901" parent="120" name="Total_D_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="902" parent="120" name="PRIMARY">
+      <columns>PK_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="903" parent="121" name="PK_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="904" parent="121" name="TB_Pk_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="905" parent="121" name="Ac_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="906" parent="121" name="Ac_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="907" parent="121" name="Ac_Sub_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="908" parent="121" name="Ac_Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="909" parent="121" name="COF_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="910" parent="121" name="COF_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="911" parent="121" name="Total_C_Bf_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="912" parent="121" name="Total_D_Bf_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="913" parent="121" name="Total_C_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="914" parent="121" name="Total_D_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="915" parent="121" name="PRIMARY">
+      <columns>PK_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="916" parent="122" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="917" parent="122" name="masterpk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="918" parent="122" name="mainN0">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="919" parent="122" name="SubNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="920" parent="122" name="mainName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="921" parent="122" name="amount">
+      <data-type>double(20,2)|0</data-type>
+    </column>
+    <key id="922" parent="122" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="923" parent="123" name="pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="924" parent="123" name="acmonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="925" parent="123" name="currDate">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="926" parent="123" name="UserId">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="927" parent="123" name="PRIMARY">
+      <columns>pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="928" parent="124" name="PeriodNo">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="929" parent="124" name="Ac_Year_No">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="930" parent="124" name="Period_Start_date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="931" parent="124" name="Period_End__date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="932" parent="124" name="user_Id">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="933" parent="124" name="Curr_date_time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="934" parent="124" name="Active">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="935" parent="125" name="Other_VAT_Account">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="936" parent="126" name="PA_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="937" parent="126" name="Adv_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="938" parent="126" name="Deb_Code">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="939" parent="126" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="940" parent="126" name="State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="941" parent="126" name="Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="942" parent="126" name="UserId">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="943" parent="126" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="944" parent="127" name="PA_Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="945" parent="127" name="PA_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="946" parent="127" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="947" parent="127" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="948" parent="127" name="PRIMARY">
+      <columns>PA_Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="949" parent="128" name="PA_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="950" parent="128" name="Reference_no">
+      <data-type>varchar(125)|0</data-type>
+      <default-expression>&apos;NULL&apos;</default-expression>
+    </column>
+    <key id="951" parent="128" name="PRIMARY">
+      <columns>PA_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="952" parent="129" name="PA_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="953" parent="129" name="Posting_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="954" parent="129" name="Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="955" parent="129" name="PRIMARY">
+      <columns>PA_No
+Posting_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="956" parent="130" name="Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="957" parent="130" name="Percentage">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="958" parent="130" name="PRIMARY">
+      <columns>Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="959" parent="131" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="960" parent="131" name="PV_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="961" parent="131" name="Cheque_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="962" parent="131" name="Reverse_State">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="963" parent="131" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="964" parent="131" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="965" parent="131" name="cheq_count">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="966" parent="131" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="967" parent="132" name="R_Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="968" parent="132" name="Cheque_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="969" parent="132" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="970" parent="132" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="971" parent="132" name="cheq_count">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="972" parent="132" name="PRIMARY">
+      <columns>R_Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="973" parent="133" name="PV_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="974" parent="133" name="V_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="975" parent="133" name="Sup_Code">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="976" parent="133" name="Bank_Code">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="977" parent="133" name="Cheque_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="978" parent="133" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="979" parent="133" name="Reason">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="980" parent="133" name="Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="981" parent="133" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="982" parent="133" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="983" parent="133" name="Approval_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="984" parent="133" name="Amount_In_Words">
+      <data-type>varchar(1024)|0</data-type>
+    </column>
+    <column id="985" parent="133" name="Cheque_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="986" parent="133" name="PO_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="987" parent="133" name="Payment_Type">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="988" parent="133" name="Has_Posting">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="989" parent="133" name="Is_Debtor_PV">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="990" parent="133" name="cheq_count">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="991" parent="133" name="PRIMARY">
+      <columns>PV_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="992" parent="134" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(50)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="993" parent="134" name="PV_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="994" parent="134" name="PO_Code">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="995" parent="134" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="996" parent="134" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="997" parent="134" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="998" parent="135" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="999" parent="135" name="Pv_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1000" parent="135" name="Approval_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1001" parent="135" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1002" parent="135" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1003" parent="135" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1004" parent="136" name="Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1005" parent="136" name="PV_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1006" parent="136" name="Cancel_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1007" parent="136" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1008" parent="136" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1009" parent="136" name="PRIMARY">
+      <columns>Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1010" parent="137" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(50)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1011" parent="137" name="Pv_No">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="1012" parent="137" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1013" parent="137" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1014" parent="137" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1015" parent="138" name="PV_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1016" parent="138" name="V_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1017" parent="138" name="Sup_Code">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1018" parent="138" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1019" parent="138" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1020" parent="138" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1021" parent="138" name="Amount_In_Words">
+      <data-type>varchar(1024)|0</data-type>
+    </column>
+    <column id="1022" parent="138" name="Description">
+      <data-type>varchar(220)|0</data-type>
+    </column>
+    <column id="1023" parent="138" name="RefCode">
+      <data-type>varchar(220)|0</data-type>
+    </column>
+    <column id="1024" parent="139" name="PV_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1025" parent="139" name="Posting_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1026" parent="139" name="State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1027" parent="139" name="Cheque_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1028" parent="139" name="PRIMARY">
+      <columns>PV_No
+Posting_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1029" parent="140" name="pkno">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1030" parent="140" name="Other_Acc">
+      <data-type>varchar(150)|0</data-type>
+    </column>
+    <column id="1031" parent="140" name="Description">
+      <data-type>varchar(765)|0</data-type>
+    </column>
+    <column id="1032" parent="141" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1033" parent="141" name="Reference_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1034" parent="141" name="Canceled_Ref">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1035" parent="141" name="Cancel_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1036" parent="141" name="Canceled_User">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1037" parent="141" name="Current_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1038" parent="141" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1039" parent="142" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(15)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1040" parent="142" name="Master_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1041" parent="142" name="Transaction_Ref">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1042" parent="142" name="Posting_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1043" parent="142" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1044" parent="142" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1045" parent="142" name="Posting_Ref">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <key id="1046" parent="142" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1047" parent="143" name="Tno">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1048" parent="143" name="Tdate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1049" parent="143" name="Ex_Account">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="1050" parent="143" name="Ex_DeptNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1051" parent="143" name="Description">
+      <data-type>varchar(511)|0</data-type>
+    </column>
+    <column id="1052" parent="143" name="amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1053" parent="143" name="posting_State">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1054" parent="143" name="curr_date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1055" parent="143" name="user_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1056" parent="143" name="Reference_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1057" parent="143" name="RefCode">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1058" parent="143" name="Transaction_Type">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1059" parent="143" name="Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1060" parent="143" name="Amount_In_Word">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="1061" parent="143" name="PRIMARY">
+      <columns>Tno</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1062" parent="144" name="Cancel_No">
+      <mandatory>1</mandatory>
+      <data-type>int(15)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1063" parent="144" name="Transaction_Code">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1064" parent="144" name="Transaction_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1065" parent="144" name="Cancel_Reason">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1066" parent="144" name="Canceled_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1067" parent="144" name="Canceled_User">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1068" parent="144" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1069" parent="144" name="PRIMARY">
+      <columns>Cancel_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1070" parent="145" name="PV_No">
+      <mandatory>1</mandatory>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1071" parent="145" name="V_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1072" parent="145" name="Sup_Code">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1073" parent="145" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1074" parent="145" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1075" parent="145" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1076" parent="145" name="Amount_In_Words">
+      <data-type>varchar(1024)|0</data-type>
+    </column>
+    <column id="1077" parent="145" name="Ex_DeptNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1078" parent="145" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1079" parent="145" name="Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1080" parent="146" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(15)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1081" parent="146" name="Transaction_Ref">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1082" parent="146" name="Posting_No">
+      <data-type>int(15)|0</data-type>
+    </column>
+    <column id="1083" parent="146" name="Trans_Cancel_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1084" parent="146" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1085" parent="147" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(50)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1086" parent="147" name="Transaction_No">
+      <data-type>int(50)|0</data-type>
+    </column>
+    <column id="1087" parent="147" name="Previous_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1088" parent="147" name="New_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1089" parent="147" name="Updated_User">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1090" parent="147" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1091" parent="147" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1092" parent="148" name="Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1093" parent="148" name="Val">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="1094" parent="148" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="1095" parent="148" name="PRIMARY">
+      <columns>Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1096" parent="149" name="DailyNo">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1097" parent="149" name="AcYear">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1098" parent="149" name="AcPeriod">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1099" parent="149" name="NightDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1100" parent="149" name="RoomNight">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1101" parent="149" name="GuestNight">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1102" parent="149" name="AllRoom">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1103" parent="149" name="Occupency">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1104" parent="149" name="RoomRate">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1105" parent="149" name="PRIMARY">
+      <columns>DailyNo</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1106" parent="150" name="Posting_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1107" parent="150" name="Reference_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1108" parent="150" name="Account_No">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1109" parent="150" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1110" parent="150" name="Description">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="1111" parent="150" name="Credit_Debit">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1112" parent="150" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1113" parent="150" name="C_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1114" parent="150" name="D_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1115" parent="150" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1116" parent="150" name="Posting_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="1117" parent="150" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1118" parent="150" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1119" parent="150" name="PRIMARY">
+      <columns>Posting_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1120" parent="151" name="Posting_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1121" parent="151" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1122" parent="151" name="PeriodNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1123" parent="151" name="Reference_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1124" parent="151" name="Journel_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1125" parent="151" name="Account_No">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1126" parent="151" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1127" parent="151" name="Description">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="1128" parent="151" name="Credit_Debit">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1129" parent="151" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1130" parent="151" name="C_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1131" parent="151" name="D_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1132" parent="151" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1133" parent="151" name="Allocation">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1134" parent="151" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1135" parent="151" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1136" parent="151" name="Posting_From">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <column id="1137" parent="151" name="FA_Item_No">
+      <data-type>varchar(125)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1138" parent="151" name="Fixed_Asset_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1139" parent="151" name="PMS_Inventory_Posting_No">
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1140" parent="151" name="Is_Used">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1141" parent="151" name="Is_Next_Month_Posting">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1142" parent="151" name="inv_no">
+      <data-type>varchar(100)|0</data-type>
+      <default-expression>&apos;-&apos;</default-expression>
+    </column>
+    <column id="1143" parent="151" name="cheq_count">
+      <data-type>int(11)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <index id="1144" parent="151" name="NewIndex1">
+      <columns>Account_No</columns>
+      <desc-columns></desc-columns>
+    </index>
+    <key id="1145" parent="151" name="PRIMARY">
+      <columns>Posting_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1146" parent="152" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1147" parent="152" name="Descrip">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1148" parent="152" name="count_">
+      <data-type>tinyint(1)|0</data-type>
+    </column>
+    <key id="1149" parent="152" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1150" parent="153" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1151" parent="153" name="Master_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1152" parent="153" name="Main_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1153" parent="153" name="Main_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1154" parent="153" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1155" parent="153" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1156" parent="153" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1157" parent="154" name="Master_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1158" parent="154" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1159" parent="154" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1160" parent="154" name="From_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1161" parent="154" name="To_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1162" parent="154" name="Begin_Balance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1163" parent="154" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1164" parent="154" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1165" parent="154" name="PRIMARY">
+      <columns>Master_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1166" parent="155" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1167" parent="155" name="BS_Pk_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1168" parent="155" name="Main_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1169" parent="155" name="Main_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1170" parent="155" name="Sub_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1171" parent="155" name="Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1172" parent="155" name="month_to_date">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1173" parent="155" name="Account_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1174" parent="155" name="Account_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1175" parent="155" name="main_subtype_no">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1176" parent="155" name="main_sub_name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <key id="1177" parent="155" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1178" parent="156" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1179" parent="156" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1180" parent="156" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1181" parent="156" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1182" parent="156" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1183" parent="156" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1184" parent="157" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1185" parent="157" name="co_Pk_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1186" parent="157" name="Main_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1187" parent="157" name="Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1188" parent="157" name="Source_Type">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1189" parent="157" name="Source">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1190" parent="157" name="COF_No">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1191" parent="157" name="COF_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1192" parent="157" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1193" parent="157" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1194" parent="158" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1195" parent="158" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1196" parent="158" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1197" parent="158" name="From_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1198" parent="158" name="To_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1199" parent="158" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1200" parent="158" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1201" parent="158" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1202" parent="159" name="PK_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1203" parent="159" name="CK_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1204" parent="159" name="Ac_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1205" parent="159" name="Ac_Sub_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1206" parent="159" name="Ac_Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1207" parent="159" name="COF_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1208" parent="159" name="AmountTot">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1209" parent="159" name="Amount1">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1210" parent="159" name="Amount2">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1211" parent="159" name="Amount3">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1212" parent="159" name="Amount4">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1213" parent="159" name="Amount5">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1214" parent="159" name="Amount6">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1215" parent="159" name="PRIMARY">
+      <columns>PK_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1216" parent="160" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1217" parent="160" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1218" parent="160" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1219" parent="160" name="Curr_Date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="1220" parent="160" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1221" parent="160" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1222" parent="161" name="PK_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1223" parent="161" name="DK_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1224" parent="161" name="Ac_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1225" parent="161" name="Ac_Sub_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1226" parent="161" name="Ac_Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1227" parent="161" name="COF_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1228" parent="161" name="AmountTot">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1229" parent="161" name="Amount1">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1230" parent="161" name="Amount2">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1231" parent="161" name="Amount3">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1232" parent="161" name="Amount4">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1233" parent="161" name="Amount5">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1234" parent="161" name="Amount6">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1235" parent="161" name="Amount7">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1236" parent="161" name="PRIMARY">
+      <columns>PK_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1237" parent="162" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1238" parent="162" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1239" parent="162" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1240" parent="162" name="Curr_Date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="1241" parent="162" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1242" parent="162" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1243" parent="163" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1244" parent="163" name="PL_Pk_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1245" parent="163" name="Type_">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1246" parent="163" name="Group_1">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1247" parent="163" name="SubName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1248" parent="163" name="AmountM2Date">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1249" parent="163" name="AmountY2Date">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1250" parent="163" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1251" parent="164" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1252" parent="164" name="PL_Pk_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1253" parent="164" name="Type_">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1254" parent="164" name="Group_1">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1255" parent="164" name="SubName">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1256" parent="164" name="AmountM2Date">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1257" parent="164" name="AmountM2DateBudget">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1258" parent="164" name="AmountY2Date">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1259" parent="164" name="AmountY2DateBudget">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1260" parent="164" name="Main_No">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1261" parent="164" name="COA_No">
+      <data-type>varchar(225)|0</data-type>
+    </column>
+    <column id="1262" parent="164" name="COA_Name">
+      <data-type>varchar(225)|0</data-type>
+    </column>
+    <key id="1263" parent="164" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1264" parent="165" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1265" parent="165" name="pldep_Pk_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1266" parent="165" name="Main_Type">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1267" parent="165" name="Sub_Type">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1268" parent="165" name="COF_No">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1269" parent="165" name="COF_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1270" parent="165" name="month_to_date">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1271" parent="165" name="year_to_date">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1272" parent="165" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1273" parent="166" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1274" parent="166" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1275" parent="166" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1276" parent="166" name="Main_dept">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1277" parent="166" name="Sub_dept">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1278" parent="166" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1279" parent="166" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1280" parent="166" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1281" parent="167" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1282" parent="167" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1283" parent="167" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1284" parent="167" name="Curr_Date">
+      <data-type>datetime|0</data-type>
+    </column>
+    <column id="1285" parent="167" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1286" parent="167" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1287" parent="168" name="PK_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1288" parent="168" name="TB_Pk_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1289" parent="168" name="Ac_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1290" parent="168" name="Ac_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1291" parent="168" name="Ac_Sub_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1292" parent="168" name="Ac_Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1293" parent="168" name="COF_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1294" parent="168" name="COF_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1295" parent="168" name="Total_C_Bf_Period">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1296" parent="168" name="Total_D_Bf_Period">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1297" parent="168" name="Total_C_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1298" parent="168" name="Total_D_Period">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1299" parent="168" name="PRIMARY">
+      <columns>PK_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1300" parent="169" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1301" parent="169" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1302" parent="169" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1303" parent="169" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1304" parent="169" name="userID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1305" parent="169" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1306" parent="170" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1307" parent="170" name="Header_Pk">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="1308" parent="170" name="SOF_No">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="1309" parent="170" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1310" parent="170" name="Posting_No">
+      <data-type>int(255)|0</data-type>
+    </column>
+    <column id="1311" parent="170" name="SOF_Cancel_State">
+      <comment>0-no, 1-canceled</comment>
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1312" parent="170" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1313" parent="171" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1314" parent="171" name="Customer_ID">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1315" parent="171" name="Receive_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1316" parent="171" name="Credit_Account">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1317" parent="171" name="Credit_Posting_No">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1318" parent="171" name="Advance_Total">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1319" parent="171" name="Cheque_Cancel_State">
+      <comment>0-no, 1-canceled</comment>
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1320" parent="171" name="User_ID">
+      <data-type>varchar(11)|0</data-type>
+    </column>
+    <column id="1321" parent="171" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1322" parent="171" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1323" parent="172" name="Auto_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1324" parent="172" name="Advance_H_Pk">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="1325" parent="172" name="Ref_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1326" parent="172" name="Record_Type">
+      <comment>1-sof advance, 2-invoice advance</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1327" parent="172" name="Total_Value">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1328" parent="172" name="Cancel_Payment_Pk">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="1329" parent="172" name="Reserved_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1330" parent="172" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1331" parent="172" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1332" parent="172" name="Advance_Cancel_State">
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1333" parent="172" name="PRIMARY">
+      <columns>Auto_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1334" parent="173" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1335" parent="173" name="Ref_No">
+      <comment>whether SOF/Invoice code</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1336" parent="173" name="Cancel_Type">
+      <comment>1-sof, 2-invoice</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1337" parent="173" name="Advance_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1338" parent="173" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1339" parent="173" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1340" parent="173" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1341" parent="174" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1342" parent="174" name="Ref_No">
+      <comment>sof advance h pk/ invoice payment h pk</comment>
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1343" parent="174" name="Customer_ID">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1344" parent="174" name="Cancel_Type">
+      <comment>1-sof advance cheque, 2-invoice payment cheque</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1345" parent="174" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1346" parent="174" name="Cancel_Date">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1347" parent="174" name="User_ID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1348" parent="174" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1349" parent="174" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1350" parent="175" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1351" parent="175" name="Header_Pk">
+      <data-type>int(127)|0</data-type>
+    </column>
+    <column id="1352" parent="175" name="Invoice_Code">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1353" parent="175" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1354" parent="175" name="Posting_No">
+      <data-type>int(255)|0</data-type>
+    </column>
+    <column id="1355" parent="175" name="Invoice_Cancel_State">
+      <comment>0-no, 1-canceled</comment>
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1356" parent="175" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1357" parent="176" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(127)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1358" parent="176" name="Customer_ID">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1359" parent="176" name="Total_Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1360" parent="176" name="User_ID">
+      <data-type>varchar(11)|0</data-type>
+    </column>
+    <column id="1361" parent="176" name="Curr_Date">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1362" parent="176" name="Payment_Type">
+      <comment>1-normal payment  2- Advance</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1363" parent="176" name="sof_advance_d_Pkno">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1364" parent="176" name="Cheque_Cancel_State">
+      <comment>0-no, 1-canceled</comment>
+      <data-type>int(2)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1365" parent="176" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1366" parent="177" name="S_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1367" parent="177" name="Ref_No">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="1368" parent="177" name="Posting_No1">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1369" parent="177" name="Posting_No2">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1370" parent="177" name="Credit_Debit">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1371" parent="177" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1372" parent="177" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1373" parent="177" name="Total">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1374" parent="177" name="Amount1">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1375" parent="177" name="Amount2">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1376" parent="177" name="PRIMARY">
+      <columns>S_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1377" parent="178" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1378" parent="178" name="PostingNo">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="1379" parent="178" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1380" parent="179" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1381" parent="179" name="COA_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <key id="1382" parent="179" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1383" parent="180" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1384" parent="180" name="Centre_Type">
+      <comment>1-accommadation revenue centre, 2-other revenue centre</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1385" parent="180" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1386" parent="180" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1387" parent="181" name="D_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1388" parent="181" name="H_Pk">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1389" parent="181" name="COA_No">
+      <data-type>varchar(125)|0</data-type>
+      <default-expression>&apos; &apos;</default-expression>
+    </column>
+    <column id="1390" parent="181" name="COA_Name">
+      <data-type>varbinary(255)|0</data-type>
+      <default-expression>&apos; &apos;</default-expression>
+    </column>
+    <column id="1391" parent="181" name="Month1">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1392" parent="181" name="Month2">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1393" parent="181" name="Month3">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1394" parent="181" name="Month4">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1395" parent="181" name="Month5">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1396" parent="181" name="Month6">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1397" parent="181" name="Month7">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1398" parent="181" name="Month8">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1399" parent="181" name="Month9">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1400" parent="181" name="Month10">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1401" parent="181" name="Month11">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1402" parent="181" name="Month12">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1403" parent="181" name="PRIMARY">
+      <columns>D_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1404" parent="182" name="H_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1405" parent="182" name="Ac_Year">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1406" parent="182" name="Period_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1407" parent="182" name="Sub_Type_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1408" parent="182" name="Sub_Type_Name">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="1409" parent="182" name="UserId">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1410" parent="182" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1411" parent="182" name="PRIMARY">
+      <columns>H_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1412" parent="183" name="Update_Pk">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1413" parent="183" name="Ac_Year">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1414" parent="183" name="Period_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1415" parent="183" name="Sub_Type_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1416" parent="183" name="UserId">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1417" parent="183" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1418" parent="183" name="PRIMARY">
+      <columns>Update_Pk</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1419" parent="184" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1420" parent="184" name="Cost_Type">
+      <comment>1-food, 2-beverage</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1421" parent="184" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1422" parent="184" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1423" parent="185" name="PK_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1424" parent="185" name="H_Pk">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1425" parent="185" name="Accom_not">
+      <comment>1-accommodation, 0-not</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1426" parent="185" name="add_subtract">
+      <comment>1-add, 2-subtract</comment>
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1427" parent="185" name="Main_No">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1428" parent="185" name="Main_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1429" parent="185" name="Sub_No">
+      <data-type>int(2)|0</data-type>
+    </column>
+    <column id="1430" parent="185" name="Sub_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1431" parent="185" name="COF_No">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1432" parent="185" name="COF_Name">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1433" parent="185" name="Month1_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1434" parent="185" name="Month1">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1435" parent="185" name="Month2_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1436" parent="185" name="Month2">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1437" parent="185" name="Month3_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1438" parent="185" name="Month3">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1439" parent="185" name="Month4_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1440" parent="185" name="Month4">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1441" parent="185" name="Month5_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1442" parent="185" name="Month5">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1443" parent="185" name="Month6_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1444" parent="185" name="Month6">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1445" parent="185" name="Month7_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1446" parent="185" name="Month7">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1447" parent="185" name="Month8_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1448" parent="185" name="Month8">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1449" parent="185" name="Month9_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1450" parent="185" name="Month9">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1451" parent="185" name="Month10_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1452" parent="185" name="Month10">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1453" parent="185" name="Month11_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1454" parent="185" name="Month11">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1455" parent="185" name="Month12_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1456" parent="185" name="Month12">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1457" parent="185" name="Year_bud">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1458" parent="185" name="Year_Act">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1459" parent="185" name="PRIMARY">
+      <columns>PK_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1460" parent="186" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1461" parent="186" name="AcYearNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1462" parent="186" name="AcMonthNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1463" parent="186" name="Curr_Date">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1464" parent="186" name="UserID">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1465" parent="186" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1466" parent="187" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1467" parent="187" name="Description">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1468" parent="187" name="Account_No">
+      <data-type>varchar(127)|0</data-type>
+    </column>
+    <column id="1469" parent="187" name="Percentage">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1470" parent="187" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1471" parent="188" name="Sub_Dept_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1472" parent="188" name="Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1473" parent="188" name="Sub_Dept_Name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="1474" parent="188" name="Description">
+      <data-type>varchar(200)|0</data-type>
+    </column>
+    <key id="1475" parent="188" name="PRIMARY">
+      <columns>Sub_Dept_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1476" parent="189" name="pk">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1477" parent="189" name="main_no">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1478" parent="189" name="type_name">
+      <data-type>varchar(900)|0</data-type>
+    </column>
+    <column id="1479" parent="190" name="id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1480" parent="190" name="address">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <key id="1481" parent="190" name="PRIMARY">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1482" parent="191" name="sub_no">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1483" parent="192" name="Temp_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1484" parent="192" name="Journel_Type">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1485" parent="192" name="PeriodNo">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1486" parent="192" name="Reference_No">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1487" parent="192" name="Journel_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1488" parent="192" name="Account_No">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1489" parent="192" name="Sub_Dept_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1490" parent="192" name="Description">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="1491" parent="192" name="Credit_Debit">
+      <data-type>int(1)|0</data-type>
+    </column>
+    <column id="1492" parent="192" name="Amount">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1493" parent="192" name="C_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1494" parent="192" name="D_Amount">
+      <data-type>double|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1495" parent="192" name="Date_">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1496" parent="192" name="User_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1497" parent="192" name="Curr_Date_Time">
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <column id="1498" parent="192" name="Current_State">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="1499" parent="192" name="PRIMARY">
+      <columns>Temp_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1500" parent="193" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1501" parent="193" name="Locked_By_User">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1502" parent="193" name="No_of_Records">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1503" parent="193" name="Unlock_User">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1504" parent="193" name="Curr_Date_Time">
+      <mandatory>1</mandatory>
+      <data-type>timestamp|0</data-type>
+      <default-expression>CURRENT_TIMESTAMP</default-expression>
+    </column>
+    <key id="1505" parent="193" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1506" parent="194" name="User_Id">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1507" parent="194" name="User_Name">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="1508" parent="194" name="Pwd">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="1509" parent="194" name="User_Type">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1510" parent="194" name="Active">
+      <data-type>int(100)|0</data-type>
+      <default-expression>&apos;1&apos;</default-expression>
+    </column>
+    <key id="1511" parent="194" name="PRIMARY">
+      <columns>User_Id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1512" parent="195" name="Type_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1513" parent="195" name="Type_Name">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <column id="1514" parent="195" name="Description">
+      <data-type>varchar(250)|0</data-type>
+    </column>
+    <key id="1515" parent="195" name="PRIMARY">
+      <columns>Type_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1516" parent="196" name="pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1517" parent="196" name="Type_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1518" parent="196" name="Job_Id">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <key id="1519" parent="196" name="PRIMARY">
+      <columns>pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1520" parent="197" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1521" parent="197" name="UserType_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1522" parent="197" name="Approval_Person_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1523" parent="197" name="PaymentVoucher_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1524" parent="197" name="CreditNote_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1525" parent="197" name="DebitNote_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1526" parent="197" name="BankNote_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1527" parent="197" name="Debtor_Approval">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1528" parent="197" name="Approve_Debetor_Credit">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1529" parent="197" name="Approve_Debetor_Debit">
+      <data-type>int(1)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <key id="1530" parent="197" name="PRIMARY">
+      <columns>Pk_No</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1531" parent="198" name="vatNo">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1532" parent="199" name="pk_no">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="1533" parent="199" name="Ac_year_no">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="1534" parent="199" name="Ac_Name">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="1535" parent="199" name="chartofaccount_no">
+      <data-type>varchar(50)|0</data-type>
+    </column>
+    <column id="1536" parent="199" name="chartofaccount_name">
+      <data-type>varchar(100)|0</data-type>
+    </column>
+    <column id="1537" parent="199" name="credit_sum">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1538" parent="199" name="debit_sum">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1539" parent="199" name="balance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1540" parent="199" name="prev_cre_balance">
+      <data-type>double|0</data-type>
+    </column>
+    <column id="1541" parent="199" name="prev_deb_balance">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="1542" parent="199" name="PRIMARY">
+      <columns>pk_no</columns>
+      <primary>1</primary>
+    </key>
+    <column id="1543" parent="200" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(20)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1544" parent="200" name="R_no">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1545" parent="200" name="Posting_No">
+      <data-type>int(20)|0</data-type>
+    </column>
+    <column id="1546" parent="200" name="AccountNo">
+      <data-type>varchar(125)|0</data-type>
+    </column>
+    <column id="1547" parent="200" name="Rdate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="1548" parent="201" name="Pk_No">
+      <mandatory>1</mandatory>
+      <data-type>int(10)|0</data-type>
+      <default-expression>&apos;0&apos;</default-expression>
+    </column>
+    <column id="1549" parent="201" name="Posting_No">
+      <data-type>int(10)|0</data-type>
+    </column>
+    <column id="1550" parent="201" name="bank">
+      <data-type>varchar(255)|0</data-type>
+    </column>
+    <column id="1551" parent="201" name="Rdate">
+      <data-type>date|0</data-type>
+    </column>
+  </database-model>
+</dataSource>
