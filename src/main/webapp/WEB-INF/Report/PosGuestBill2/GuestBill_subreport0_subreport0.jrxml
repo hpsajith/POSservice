@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="classic"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="311"
+		 pageHeight="612"
+		 columnWidth="311"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="AllSectionsNoDetail"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="itemPrice" isForPrompting="true" class="java.lang.Double"/>
+	<parameter name="kotNo" isForPrompting="true" class="java.lang.String"/>
+	<parameter name="payType" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" isForPrompting="true" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[".\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="newTotal" isForPrompting="true" class="java.lang.Double"/>
+	<parameter name="comments" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[$P{comments}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="exchangeRate" isForPrompting="false" class="java.lang.Double">
+		<defaultValueExpression ><![CDATA[$P{exchangeRate}]]></defaultValueExpression>
+	</parameter>
+	<parameter name="currencyName" isForPrompting="false" class="java.lang.String">
+		<defaultValueExpression ><![CDATA[$P{currencyName}]]></defaultValueExpression>
+	</parameter>
+	<queryString><![CDATA[SELECT DisPosName,sum(Payment_Amount) as Payment_Amount FROM front_payment,config_discount WHERE front_payment.DiscountNo=config_discount.DisNo AND Payment_Type='6' AND Kot_No = $P!{kotNo} group by DiscountNo]]></queryString>
+
+	<field name="DisPosName" class="java.lang.String"/>
+	<field name="Payment_Amount" class="java.lang.Double"/>
+
+	<variable name="discount" class="java.lang.Double" resetType="Report" calculation="Sum">
+		<variableExpression><![CDATA[$F{Payment_Amount}]]></variableExpression>
+		<initialValueExpression><![CDATA[new Double("0")]]></initialValueExpression>
+	</variable>
+	<variable name="discountDisplay" class="java.lang.Double" resetType="Report" calculation="Nothing">
+	</variable>
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="40"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="14"
+						width="311"
+						height="13"
+						key="subreport-1"/>
+					<subreportParameter  name="itemPrice">
+						<subreportParameterExpression><![CDATA[new java.lang.Double(  ($P{itemPrice}.doubleValue()) -($V{discount}.doubleValue()) )]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="kotNo">
+						<subreportParameterExpression><![CDATA[$P{kotNo}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="payType">
+						<subreportParameterExpression><![CDATA[$P{payType}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="SUBREPORT_DIR">
+						<subreportParameterExpression><![CDATA[$P{SUBREPORT_DIR}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="comments">
+						<subreportParameterExpression><![CDATA[$P{comments}]]></subreportParameterExpression>
+					</subreportParameter>
+					<subreportParameter  name="exchangeRate">
+						<subreportParameterExpression><![CDATA[$P{exchangeRate}]]></subreportParameterExpression>
+					</subreportParameter>
+					<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					<subreportExpression  class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "GuestBill_subreport0.jasper"]]></subreportExpression>
+				</subreport>
+			</band>
+		</summary>
+</jasperReport>
